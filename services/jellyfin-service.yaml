@@ -3,7 +3,9 @@ kind: Service
 metadata:
   name: jellyfin
 spec:
-  type: NodePort
+  type: LoadBalancer
+  externalIPs:
+    - 10.188.106.85
   selector:
     app: jellyfin
   ports:
